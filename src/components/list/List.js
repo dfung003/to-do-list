@@ -9,7 +9,9 @@ export default function List({ addToCompleted, inputItem }) {
             <ul>
                 {
                     inputItem.map((item, idx) => {
-                        <ListItem key={idx} content={item.title} addToCompleted={addToCompleted} />
+                        return (
+                            <ListItem key={idx} content={item.title} addToCompleted={addToCompleted} />
+                        )
                     })
                 }
             </ul>
