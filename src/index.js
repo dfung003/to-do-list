@@ -1,7 +1,6 @@
 import React from 'react';
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './pages/App/App';
 // Import the top-level BrowserRouter component
 // gives access to state and ref hooks (look at DevTools)
