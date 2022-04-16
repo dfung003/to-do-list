@@ -12,3 +12,5 @@ const toDoListData = [
         completed: false
     }
 ];
+
+export default toDoListData;
