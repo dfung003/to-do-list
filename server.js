@@ -4,6 +4,7 @@ const path = require("path");
 const logger = require("morgan");
 // development to avoid collision with React's dev server
 const port = process.env.PORT || 3001;
+const Task = require('./models/tasks');
 
 // Connect to database
 require("./config/database.js");
@@ -18,7 +19,15 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'build')));
 
 // API routes
+app.post('/api/tasks', async (req, res) => {
+    try {
+        const task = await Task.create(req.body);
 
+        res.status(200).json(task);
+    } catch (e) {
+        res.status(400).json(e);
+    }
+})
 
 // Catch all route
 app.get('/*', (req, res) => {

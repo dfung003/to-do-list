@@ -1,4 +1,4 @@
-import Reeact from 'react';
+import React from 'react';
 
 export default function Completed(props) {
     return (
@@ -9,7 +9,7 @@ export default function Completed(props) {
                     props.completedItem.map((item) => {
                         return (
                             <li>
-                                {item}
+                                {item} <button>Remove</button>
                             </li>
                         )
                     })

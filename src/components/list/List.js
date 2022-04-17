@@ -5,7 +5,7 @@ import ListItem from '../listItem/ListItem';
 export default function List({ addToCompleted, inputItem }) {
     return (
         <main>
-            <h1>List</h1>
+            <h1>To-Do Items</h1>
             <ul>
                 {
                     inputItem.map((item, idx) => {
